@@ -11,19 +11,19 @@ function Card() {
                     <ul className="cards__items">
                         
                         <CardItem 
-                        src= 'images/img-9.jpg'
+                        src= 'images/image-html.jpg'
                         text="Pratice with HTML"
                         label="HTML"
                         path="/services"/>
 
                         <CardItem 
-                        src="/images/img-2.jpg"
+                        src="/images/image-script.png"
                         text="Pratice with JavaScript "
                         label="JavaScript"
                         path="/services"/>
                         
                         <CardItem 
-                        src="/images/img-3.jpg"
+                        src="/images/img-php.png"
                         text="Pratice With PHP"
                         label="PHP"
                         path="/services"/>
