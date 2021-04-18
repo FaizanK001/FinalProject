@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import '../assets/CSS/style.css'
 
+
 function Login(){
+  const [click, setClick] = useState(true);
+  const [button, setButton] = useState(true);
+
+ // const handleClick = () => setClick(!click);
+  //const sign_up_form = () => setClick(false);
+ 
 
 return (
   <>
  <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+
+         { 
+       click?<form action="#" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -36,10 +45,10 @@ return (
             </div>
           </form>
 
+:
 
 
-
-          <form action="#" class="sign-up-form">
+         <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -70,6 +79,8 @@ return (
               </a>
             </div>
           </form>
+}
+
         </div>
       </div>
 
@@ -82,8 +93,8 @@ return (
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
               ex ratione. Aliquid!
             </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Sign up
+            <button class="btn transparent" id="sign-up-btn" onClick={()=>setClick(!click)} >
+              Sign up 
             </button>
           </div>
           <img src="img/log.svg" class="image" alt="" />
@@ -95,7 +106,7 @@ return (
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               laboriosam ad deleniti.
             </p>
-            <button class="btn transparent" id="sign-in-btn">
+            <button class="btn transparent" id="sign-in-btn" >
               Sign in
             </button>
           </div>
