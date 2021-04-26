@@ -11,16 +11,16 @@ function Card() {
           <ul className="cards__items">
             <CardItem
               src="images/image-html.jpg"
-              text="Pratice HTML"
+              text="Pratice with HTML"
               label="HTML"
-              path="/Html"
+              path="/services"
             />
 
             <CardItem
               src="/images/image-script.png"
-              text="Pratice CSS "
-              label="CSS"
-              path="/Css"
+              text="Pratice with JavaScript "
+              label="JavaScript"
+              path="/services"
             />
 
             <CardItem
