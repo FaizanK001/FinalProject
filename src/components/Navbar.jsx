@@ -40,12 +40,7 @@ showButton();
                     
                     <ul className= {click ? 'nav-menu active': 'nav-menu'}>
                         
-                    <li className='nav-item'>
-                           <Link to='/Javascript' className='nav-links' onClick={closeMobileMenu}>
-                               PROFILE
-                               </Link>
-                        </li>
-            
+
                         <li className='nav-item'>
                         <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                             HOME
@@ -70,6 +65,12 @@ showButton();
                                </Link>
                         </li>
                         
+                        <li className='nav-item'>
+                       <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>
+                           PROFILE
+                       </Link> 
+                    </li>
+
                      
                         <li className='nav-item'>
                         <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
