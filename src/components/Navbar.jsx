@@ -39,30 +39,44 @@ showButton();
 
                     
                     <ul className= {click ? 'nav-menu active': 'nav-menu'}>
-                       
+                        
+                    <li className='nav-item'>
+                           <Link to='/Javascript' className='nav-links' onClick={closeMobileMenu}>
+                               PROFILE
+                               </Link>
+                        </li>
+            
                         <li className='nav-item'>
                         <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Home
+                            HOME
                         </Link>
                         </li>
 
                         <li className='nav-item'>
-                        <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
-                           Services
+                        <Link to='/Html' className='nav-links' onClick={closeMobileMenu}>
+                           HTML
                         </Link>
                         </li>
 
                         <li className='nav-item'>
-                        <Link to='/About' className='nav-links' onClick={closeMobileMenu}>
-                            About
+                        <Link to='/Css' className='nav-links' onClick={closeMobileMenu}>
+                            CSS
                         </Link>
                         </li>
-
+                       
+                       <li className='nav-item'>
+                           <Link to='/Javascript' className='nav-links' onClick={closeMobileMenu}>
+                               JAVASCRIPT
+                               </Link>
+                        </li>
+                        
+                     
                         <li className='nav-item'>
                         <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
                            Sign Up
                         </Link>
                         </li>
+                        
                     </ul>
                     {button && <Button buttonStyle='btn--outline'>Sign up</Button>}
                 </div>
