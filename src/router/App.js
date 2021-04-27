@@ -21,8 +21,8 @@ function App() {
       <Route path='/Html'  component={Html}/>
       <Route path='/Css' component={Css}/>
       <Route path='/sign-up'component={SignUp}/>
-      <Route  Path='/Javascript' component={Javascript}/>
-      <Route  Path='/profile' component={Profile}/>
+      <Route  path='/Javascript' component={Javascript}/>
+      <Route  path='/profile' component={Profile}/>
     </Switch>
 
     </Router>
