@@ -7,7 +7,12 @@ export default function Services(){
     const [buttonPop, setButtonPopup] = useState(false);
     return( 
     <>  
-    <div className="container">
+    <div className="Html-container">
+        <div className="herosection-container">
+            <h1>HTML Tutorial</h1>
+
+
+        </div>
      <div className="hpopup"> 
           <h1>Pop up</h1>
             <button onClick={() => setButtonPopup(true)}>Open Popup</button>
