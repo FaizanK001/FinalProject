@@ -6,7 +6,8 @@ import '../assets/CSS/HeroSection.css';
 function HeroSection() {
     return (
         <div className='hero-container'>
-            <video src='videos/video-2.mp4' autoPlay loop muted/>
+            <video src='videos/HD_Digits_Red.mp4' autoPlay loop muted/>
+            
             <h1>Develop Your Skills</h1>
             <p>What are you waiting for?</p>
             <div className= "hero-btns">
@@ -25,6 +26,7 @@ function HeroSection() {
                 Explore Challenges <i className='fas fa-tasks'/>
                 </Button>
                 </div>
+                
             
         </div>
     )
