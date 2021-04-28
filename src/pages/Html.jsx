@@ -27,11 +27,12 @@ export default function Services(){
           <h1>Pop up</h1>
             <button onClick={() => setButtonPopup(true)}>Open Popup</button>
             </div>
+            <div className="popup-text">
             <Popup trigger={buttonPop} setTrigger={setButtonPopup}>
                 <h3>My popup</h3>
                 <p>This is my button triggered popup</p>
             </Popup>
-
+            </div>
             </div>
     </>
     )
