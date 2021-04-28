@@ -6,21 +6,57 @@
 
 }
 
+
 .hpopup{
-padding: 32px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-min-height: 100vh;
-color: white;
-}
-.Html-container{
-    background-color: black;
     
-}
-.herosection-container{
-    height: 30vh;
-    width: 100;
-    background-color:rgb(121, 233, 121);
-}
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+    }
+    .Html-container{
+       
+        background-color: black;
+        
+    }
+    .herosection-container{
+        height: 30vh auto;
+        width: 100;
+        background-color:rgb(121, 233, 121);
+    }
+    
+    .herosection-container > h3{
+        position: relative;
+        left: 75%;
+        top: 30px;
+        
+        
+    }
+    
+    .text{
+        position: relative;
+        left: 150px;
+        bottom: 140px;
+    }
+    
+    
+    @media screen and (max-width: 1234px) {
+        .herosection-container> h3{
+          
+            position: static;
+            text-align: center;
+    
+        }
+        
+    }
+    
+    @media screen and (max-width: 1234px){
+        .text{
+            position: static;
+            
+        }
+        
+    }
