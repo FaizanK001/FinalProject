@@ -1,0 +1,14 @@
+.editor-container{
+   width: 50%;
+  height: auto;
+}
+
+.editor-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(255,6%,13%);
+    color: white;
+    padding: .5rem,.5rem,.5rem,.1rem;
+    border-top-right-radius:.5rem;
+    border-top-left-radius:.5rem ;
+}
