@@ -11,6 +11,11 @@ export default function About(){
                 <h1>CSS Tutorial</h1>
 
             </div>
+            <h1>CSS</h1>
+
+
+
+            <button>Try YouSelf</button>
         </div>
 
 

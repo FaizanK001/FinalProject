@@ -75,7 +75,7 @@ export default function Services() {
           </Popup>
         </div>
 
-        <h1> hjheerkjakdklfjasdlkjals</h1>
+        <h1> Example Explained</h1>
       </div>
     </>
   );
