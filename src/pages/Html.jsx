@@ -39,14 +39,17 @@ export default function Services() {
             </li>
           </div>
         </div>
-        <h1>A Simple HTML Document</h1>
+
+        <h1>Easy Learning with HTML "Try it Yourself"</h1>
+        <p>
+          With our "Try it Yourself" editor, you can edit the HTML code and view
+          the result:
+        </p>
 
         <div className="card-temple">
-        <div className="hpopup">
-          <button onClick={() => setButtonPopup(true)}>Open Popup</button>
-        </div>
-
-
+          <div className="hpopup">
+            <button onClick={() => setButtonPopup(true)}>Open Popup</button>
+          </div>
         </div>
 
         <div className="popup-text">
@@ -71,6 +74,8 @@ export default function Services() {
             </div>
           </Popup>
         </div>
+
+        <h1> hjheerkjakdklfjasdlkjals</h1>
       </div>
     </>
   );

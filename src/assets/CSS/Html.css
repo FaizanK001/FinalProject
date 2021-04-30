@@ -5,7 +5,13 @@
   font-family: "Fira Sans", sans-serif;
   
 }
-
+.Html-container {
+height: 100%;
+width: 100%;
+background-color: black;
+color: white;
+ 
+}
 
 
 .hpopup > button {
@@ -23,10 +29,8 @@
 .popup-text {
   color: black;
 }
-.Html-container {
-  background-color: black;
-  color: white;
-}
+
+
 .herosection-container {
   height: 30vh auto;
   width: 100;
@@ -34,7 +38,7 @@
   color: black;
 }
 
-.herosection-container > h3 {
+.herosection-container > h3{
   position: relative;
   left: 75%;
   top: 30px;
@@ -69,12 +73,22 @@
 
 .card-temple{
 
-  position: static;
+  position: relative;
   width: 37%;
-  height: 47vh;
+  height: 40vh;
+ min-width: auto;
+  left: 550px;
   background-color: gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+}
+
+@media screen and (max-width: 1250px) {
+    .card-temple{
+       align-content: center;
+       align-items: center;
+    }
+    
+}
+
+.Html-container >p{
+    text-align: center;
 }
