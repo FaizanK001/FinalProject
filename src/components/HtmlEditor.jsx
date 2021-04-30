@@ -1,24 +1,22 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Editor from "../components/Editor";
-export default function HtmlEditor({props}) {
+export default function HtmlEditor({statemessage}) {
 
-const  [html, setHtml] = useState();
+    const [currenthtml, setcurrenthtml] = useState (`${statemessage}`);
 
-    const srcDoc = `
-    <html>
-    <body>${html}</body>
+const  [srcDoc, setsrcDoc] = useState("");
 
-    </html>
-    
-    `;
+    useEffect(() => {
+        setsrcDoc(`${currenthtml}`)
+    }, [currenthtml])
     return (
         <>
         <div className="pane">
               <Editor
                 language="xml"
                 displayName="HTML"
-                value={html}
-                onChange={setHtml}
+                value={currenthtml}
+                onChange={setcurrenthtml}
               />
             </div>
             <div className="pane">
