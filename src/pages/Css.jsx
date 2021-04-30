@@ -13,8 +13,7 @@ export default function About(){
             </div>
             <h1>CSS</h1>
 
-
-
+        
             <button>Try YouSelf</button>
         </div>
 

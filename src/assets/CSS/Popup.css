@@ -23,7 +23,6 @@
   .popup-inner {
     position: absolute;
     bottom: auto;
-    
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 6fr;

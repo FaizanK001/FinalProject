@@ -2,20 +2,12 @@ import React, { useState } from "react";
 import "../App.css";
 import "../assets/CSS/Html.css";
 import Popup from "../components/Popup";
-import Editor from "../components/Editor";
+import HtmlEditor from '../components/HtmlEditor'
 
 export default function Services() {
   const [buttonPop, setButtonPopup] = useState(false);
-  const [html, setHtml] = useState("");
-  // const [css, setCss ] = useState('')
 
-  const srcDoc = `
-    <html>
-    <body>${html}</body>
-
-    </html>
-    
-    `;
+  
   return (
     <>
       <div className="Html-container">
@@ -54,24 +46,11 @@ export default function Services() {
 
         <div className="popup-text">
           <Popup trigger={buttonPop} setTrigger={setButtonPopup}>
-            <div className="pane">
-              <Editor
-                language="xml"
-                displayName="HTML"
-                value={html}
-                onChange={setHtml}
-              />
-            </div>
-            <div className="pane">
-              <iframe
-                srcDoc={srcDoc}
-                title="output"
-                sandbox="allow-scripts"
-                frameborder="0"
-                width="50%"
-                height="50%"
-              />
-            </div>
+            <HtmlEditor
+             statemessage= {'<h1>Header</h1>'}
+            
+            
+            />
           </Popup>
         </div>
 

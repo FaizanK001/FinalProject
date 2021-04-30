@@ -14,7 +14,15 @@
 
 
 .css-container> button{
-    position: relative;
-    left: 800px;
-    top: 100px;
+    background-color: rgb(132, 223, 132);
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  
 }

@@ -6,10 +6,9 @@
   
 }
 .Html-container {
-
+width: 100%;
 background-color: black;
 color: white;
- 
 }
 
 
@@ -34,6 +33,7 @@ color: white;
   height: 30vh auto;
   width: 100;
   background-color: rgb(121, 233, 121);
+  
   color: black;
 }
 
@@ -73,7 +73,7 @@ color: white;
 .card-temple{
 
   position: relative;
-  width: 37%;
+  width: 50%;
   height: 40vh;
  min-width: auto;
   left: 550px;
