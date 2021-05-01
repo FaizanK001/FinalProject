@@ -12,9 +12,11 @@
 
 .popup-inner {
   position: absolute;
-  padding: 12px;
+  padding: 15px;
+  height: 100%;
   width: 100%;
-  max-width: 640px;
+  max-height: 500px;
+  max-width: 900px;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -25,7 +27,7 @@
     bottom: auto;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 6fr;
+    grid-template-rows: 1fr;
   }
   
 }

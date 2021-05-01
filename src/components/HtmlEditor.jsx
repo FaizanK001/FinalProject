@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react'
 import Editor from "../components/Editor";
-import '../assets/CSS/Html.css'
+import '../assets/CSS/Popup.css'
+import '../assets/CSS/Editor.css'
+
 export default function HtmlEditor({statemessage}) {
 
     const [currenthtml, setcurrenthtml] = useState (`${statemessage}`);
@@ -20,7 +22,7 @@ const  [srcDoc, setsrcDoc] = useState("");
                 onChange={setcurrenthtml}
               />
             </div>
-            <div className="pane">
+            <div className="i-pane">
               <iframe
                 srcDoc={srcDoc}
                 title="output"
