@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "../App.css";
 import "../assets/CSS/Html.css";
 import Popup from "../components/Popup";
-import HtmlEditor from '../components/HtmlEditor'
+import HtmlEditor from "../components/HtmlEditor";
 
 export default function Services() {
   const [buttonPop, setButtonPopup] = useState(false);
 
-  
   return (
     <>
       <div className="Html-container">
@@ -38,19 +37,13 @@ export default function Services() {
           the result:
         </p>
 
-        <div className="card-temple">
-          <div className="hpopup">
-            <button onClick={() => setButtonPopup(true)}>Open Popup</button>
-          </div>
+        <div className="hpopup">
+          <button onClick={() => setButtonPopup(true)}>Open Popup</button>
         </div>
 
         <div className="popup-text">
           <Popup trigger={buttonPop} setTrigger={setButtonPopup}>
-            <HtmlEditor
-             statemessage= {'<h1>Header</h1>'}
-            
-            
-            />
+            <HtmlEditor statemessage={"<h1>Header</h1>"} />
           </Popup>
         </div>
 
