@@ -1,0 +1,52 @@
+.css-container{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+.css-section{
+ height: auto;
+  width: 100;
+  background-color: rgb(245, 245, 87);
+  color: black;
+}
+.css-section > h3{
+  position: relative;
+  
+  left: 75%;
+  top: 30px;
+  
+}
+
+.css-text{
+ position: relative;
+  left: 150px;
+  bottom: 140px;
+}
+
+.css-container> button{
+    position: relative;
+    left: 800px;
+    top: 100px;
+  background-color: rgb(132, 223, 132);
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+@media screen and (max-width:1234px ){
+    .css-section >h3{
+        position: static;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1234px) {
+    .css-text {
+      position: static;
+    }
+  }

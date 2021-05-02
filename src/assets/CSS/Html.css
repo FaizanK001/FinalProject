@@ -33,7 +33,7 @@ overflow: hidden;
 .herosection-container {
   height:  auto;
   width: 100;
-  background-color: rgb(121, 233, 121);
+  background: linear-gradient(180deg, rgb(126, 187, 126),rgb(180,210,150),rgb(47,58,47) 82%);
   
   color: black;
 }
