@@ -5,18 +5,18 @@
   font-family: "Fira Sans", sans-serif;
   
 }
-.Html-container {
 
+.Html-container {
 background-color: black;
 color: white;
- 
+overflow: hidden;
 }
 
 
 .hpopup > button {
   background-color: rgb(132, 223, 132);
   border: none;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -31,9 +31,10 @@ color: white;
 
 
 .herosection-container {
-  height: 30vh auto;
+  height:  auto;
   width: 100;
-  background-color: rgb(121, 233, 121);
+  background: linear-gradient(180deg, rgb(126, 187, 126),rgb(180,210,150),rgb(47,58,47) 82%);
+  
   color: black;
 }
 
@@ -56,37 +57,14 @@ color: white;
   }
 }
 
+
 @media screen and (max-width: 1234px) {
   .text {
     position: static;
   }
 }
 
-.pane {
-  width: 200%;
-  height: 200%;
 
-  display: flex;
-  flex-direction: row;
-}
-
-.card-temple{
-
-  position: relative;
-  width: 37%;
-  height: 40vh;
- min-width: auto;
-  left: 550px;
-  background-color: gray;
-}
-
-@media screen and (max-width: 1250px) {
-    .card-temple{
-       align-content: center;
-       align-items: center;
-    }
-    
-}
 
 .Html-container >p{
     text-align: center;
