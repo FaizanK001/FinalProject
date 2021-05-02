@@ -73,13 +73,13 @@ showButton();
 
                      
                         <li className='nav-item'>
-                        <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
+                        <Link to='/SignIn' className='nav-links-mobile' onClick={closeMobileMenu}>
                            Sign Up
                         </Link>
                         </li>
                         
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Sign up</Button>}
+                    {button && <Button buttonStyle='btn--outline'>Sign In</Button>}
                 </div>
             </nav>
         </>
