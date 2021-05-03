@@ -13,7 +13,7 @@ overflow: hidden;
 }
 
 
-.hpopup > button {
+.btn-popup > button {
   background-color: rgb(132, 223, 132);
   border: none;
   padding: 10px;
@@ -68,4 +68,15 @@ overflow: hidden;
 
 .Html-container >p{
     text-align: center;
+}
+.text-explained > li{ 
+  position: relative;
+  right: -350px;
+}
+
+@media screen and (max-width: 1514px) {
+  .text-explained > li{
+    position: static;
+  }
+  
 }

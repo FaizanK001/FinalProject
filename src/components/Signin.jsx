@@ -1,86 +1,102 @@
-import React from 'react'
-import {useSpring, animated} from 'react-spring';
-import { useState } from 'react/cjs/react.development';
-import '../assets/CSS/Signin.css'
-
-
+import React, { useState, useEffect } from "react";
+import fire from "../firebase/firebase";
+import Forms from '../components/Forms'
 
 export default function Signin() {
-
-    const [registrationFormStatus, setRegisterFormStatus] = useState(false);
-   // const [loginFormstatus, setLoginFormtatus] = useState ();
-
-   const loginProps = useSpring({
-       left : registrationFormStatus ? -500: 0,
-       opacity: registrationFormStatus ? 0 : 1
-   })
-   const registerProps = useSpring({
-    left : registrationFormStatus ? 0 : 500,
-    opacity: registrationFormStatus ? 1 : 0
-})
+  const [user, setUser] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailerror, setEmailError] = useState("");
+  const [passworderror, setPasswordError] = useState("");
+  const [hasAccount, setHasAccount] = useState(false);
 
 
-    function registerClicked(){ setRegisterFormStatus(true)}
-    function loginClicked(){ setRegisterFormStatus(false)}
+  const clearInputs = () => {
+      setEmail('');
+      setPassword('');
+  }
 
-    return (
-        
-         <div className="container">
-             <div className="login-register-wrapper">
-                 <div className="nav-buttons">
-                     <label onClick={loginClicked}   id="loginBtn" className='active'>Login</label>
-                     <label onClick={registerClicked}    id="registerBtn" className=' '>Register</label>
-                 </div>
-                 <div className="form-group">
-                    <animated.form action='' id='loginform' style={loginProps}><LoginForm/></animated.form> 
-                    <animated.form action='' id='registerform' style={registerProps}><RegisterForm/></animated.form>
-                     
-                 </div>
-                 <div className="forgot-panel">Forgotten Password</div>
-             </div>
-             
-         </div>
-            
-        
-    );
-}
+  const clearErrors = () =>{
+      setEmailError('');
+      setPasswordError('');
+  }
 
-function LoginForm(){
-    return(
 
-        <>
-        <React.Fragment>
-            <label for='username'>USERNAME</label>
-            <input type="text" id="username"/>
-            <label for='password'>PASSWORD</label>
-            <input type='text' id='password'/>
-            <input type='submit' value='submit' className='submit'/>        
-        
-        </React.Fragment>
-        </>
-    );
-}
+  const handleLogin = () => {
+      clearErrors();
+    fire
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch((err) => {
+        // eslint-disable-next-line default-case
+        switch (err.code) {
+          case "auth/invalid-email":
+          case "auth/user-disabled":
+          case "auth/user-not-found":
+            setEmailError(err.message);
+            break;
+          case "auth/wrong-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
 
-function RegisterForm() {
-    return(
+  const handlesignup = () =>{
+      clearErrors();
+    fire
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .catch((err) => {
+      // eslint-disable-next-line default-case
+      switch (err.code) {
+        case "auth/emial-already-in-use":
+        case "auth/invalid-email":
+          setEmailError(err.message);
+          break;
+        case "auth/weak-password":
+          setPasswordError(err.message);
+          break;
+      }
+    });
 
-<>
-<React.Fragment>
-<form action='' id='registerform'>
+  };
 
-<label for="fullname">Full Name</label>
-<input type="text" id="fullname"/>
-<label for='username'>USERNAME</label>
+  const handleLogout = () => {
+      fire.auth.signOut();
+  }
 
-<input type="text" id="username"/>
- <label for='password'>PASSWORD</label>
- <input type='text' id='password'/>
- <label for='confirmpassword'>CONFIRM PASSWORD</label>
- <input type='text' id='confirmpassword'/>
-<input type='submit' value='submit' className='submit'/> 
-</form>
-</React.Fragment>
-</>
-    );
+const authListener =() =>{
+    fire.auth().onAuthStateChanged(user=>{
+        if(user){
+            clearInputs();
+            setUser(user)
+        }else
+        setUser("");
+    })
+
+
+};
+
+useEffect(()=>{
+    authListener();
+});
+
+  return (
+  <>
+   <Forms
+   email={email}
+   setEmail={setEmail}
+   password={password}
+   setPassword={setPassword}
+   handleLogin={handleLogin}
+   handlesignup={handlesignup}
+   hasAccount={hasAccount}
+   setHasAccount={setHasAccount}
+   emailerror={emailerror}
+   passworderror={passworderror}
+   />
+  </>
     
-}
+  );
+};
