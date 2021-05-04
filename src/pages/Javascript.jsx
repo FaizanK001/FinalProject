@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-
 import JsHeroSection from "../components/JsHeroSection";
 import "../assets/CSS/Js.css";
-import Verticalmenu from "../components/Verticalmenu";
 import Popup from "../components/Popup";
 import JsEditor from "../components/JsEditor";
-import ReactMarkdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Footer from "../components/Footer";
@@ -13,24 +10,29 @@ import Footer from "../components/Footer";
 export default function Javascript() {
   const [buttonPop, setButtonPopup] = useState(false);
   const [button2Pop, setButtonPopup2] = useState(false);
- 
 
   return (
     <>
       <JsHeroSection />
       <h1>JavaScript language</h1>
 
-      <section className="section">
+     
+      <div className="section">
+      <div className="section-text">
         <h2>Examples in Each Chapter</h2>
-        <p> With our "Try it Yourself" editor, you can edit the source code and view the result.</p>
+        <p>
+          With our "Try it Yourself" editor, you can edit the source code and
+          view the result.
+        </p>
+        </div>
         <div className="Card">
           <div className="Card-header">
             <h5>Example</h5>
           </div>
           <SyntaxHighlighter language={Javascript} style={docco}>
-      {markdown1}
-    </SyntaxHighlighter>
-        
+            {markdown1}
+          </SyntaxHighlighter>
+
           <div className="btn-js">
             <button onClick={() => setButtonPopup(true)}>
               "Try it Yourself"
@@ -41,43 +43,40 @@ export default function Javascript() {
             <JsEditor statemessage={markdown1} />
           </Popup>
         </div>
-      </section>
-
-
-
+      </div>
 
       <section className="section">
-      <h2>JavaScript Can Change HTML Styles (CSS)</h2>
-        <p> Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+          <div className="section-text">
+        <h2>JavaScript Can Change HTML Styles (CSS)</h2>
+        <p>
+         
+          Changing the style of an HTML element, is a variant of changing an
+          HTML attribute:
+        </p>
+        </div>
         <div className="Card">
           <div className="Card-header">
             <h5>Example</h5>
           </div>
           <SyntaxHighlighter language={Javascript} style={docco}>
-      {markdown2}
-    </SyntaxHighlighter>
-         
+            {markdown2}
+          </SyntaxHighlighter>
+
           <div className="btn-js">
             <button onClick={() => setButtonPopup2(true)}>
               "Try it Yourself"
             </button>
           </div>
 
-         
           <Popup trigger={button2Pop} setTrigger={setButtonPopup2}>
             <JsEditor statemessage={markdown2} />
           </Popup>
         </div>
-
-
-
       </section>
       <Footer />
     </>
   );
 }
-
-
 
 const markdown1 = `<!DOCTYPE html>
 <html>

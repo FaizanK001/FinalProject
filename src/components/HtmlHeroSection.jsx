@@ -6,7 +6,7 @@ export default function HtmlHeroSection() {
       <div className="herosection-container">
         <h1>HTML Tutorial</h1>
         <h3>
-          <i class="fab fa-html5 fa-10x" />
+          <i className="fab fa-html5 fa-10x" />
         </h3>
         <div className="text">
           <h2>WHAT IS HTML ?</h2>

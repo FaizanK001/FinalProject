@@ -1,52 +1,40 @@
-.css-container{
-    background-color: black;
-    color: white;
-    overflow: hidden;
-}
 .css-section{
- height: auto;
-  width: 100;
-  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  overflow: hidden;
+}
+.Css-Card{  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width:  auto;
+  height: auto;
+  max-width: 900px;
+  border: 1px solid #ddd;
+  background-color: white;
   color: black;
-}
-.css-section > h3{
-  position: relative;
-  
-  left: 75%;
-  top: 30px;
-  
-}
+  border-radius: 10px;
+  left: 300px;
 
-.css-text{
- position: relative;
-  left: 150px;
-  bottom: 140px;
 }
-
-.css-container> button{
-    position: relative;
-    left: 800px;
-    top: 100px;
-  background-color: rgb(132, 223, 132);
-  border: none;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-@media screen and (max-width:1234px ){
-    .css-section >h3{
-        position: static;
-        text-align: center;
-    }
-}
-@media screen and (max-width: 1234px) {
-    .css-text {
+@media screen and (max-width: 1100) {
+  .Css-Card{
       position: static;
-    }
   }
+}
+.Css-Card-header{
+  font-size: 25px;
+  padding: 5px 5px;
+}
+
+.css-section-text{
+  padding: 30px 0 0 0;
+  position: relative;   
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1500) {
+  .css-section-text{
+     position: static;
+  }
+}

@@ -3,7 +3,7 @@
 
     width: 100%;
     max-width: 100%;
-    height: 37vh;
+    height: 37vh auto;
     color: black;
     background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
     overflow: hidden;
@@ -46,4 +46,10 @@
     
   }
 
+@media screen and (max-width:1234px ) {
+  .js-text{
+    position:static;
+  }
+  
+}
 

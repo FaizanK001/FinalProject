@@ -1,0 +1,32 @@
+
+.css-container{
+    height: auto;
+    width: 100;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: black;
+    overflow: hidden;
+  }
+  .css-container > h3{
+    position: relative;
+    left: 75%;
+    top: 30px;
+    
+  }
+  
+  .css-text-container{
+   position: relative;
+    left: 150px;
+    bottom: 140px;
+  }
+  
+  @media screen and (max-width:1234px ){
+      .css-container >h3{
+          position: static;
+          text-align: center;
+      }
+  }
+  @media screen and (max-width: 1234px) {
+      .css-text-container {
+        position: static;
+      }
+    }
