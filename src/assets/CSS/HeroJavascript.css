@@ -1,0 +1,49 @@
+
+.js-section{
+
+    width: 100%;
+    max-width: 100%;
+    height: 37vh;
+    color: black;
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+    overflow: hidden;
+}
+.js-section > h3{
+    position: relative;
+    left: 75%;
+    top: 30px;
+  }
+  @media screen and (max-width: 1234px) {
+    .js-section > h3 {
+      position: static;
+      text-align: center;
+    }
+  }
+
+  .js-text{
+    position: relative;
+    left: 150px;
+    bottom: 140px;
+  }
+  .btn-js >button{
+    background-color: rgb(132, 223, 132);
+    border: none;
+  
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  .markdown{
+      width: 100%;
+      height: 25vh;
+      padding: 10px;
+      outline: none;
+    
+  }
+
+

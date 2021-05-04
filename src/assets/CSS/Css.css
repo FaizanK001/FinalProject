@@ -6,7 +6,7 @@
 .css-section{
  height: auto;
   width: 100;
-  background-color: rgb(245, 245, 87);
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   color: black;
 }
 .css-section > h3{
