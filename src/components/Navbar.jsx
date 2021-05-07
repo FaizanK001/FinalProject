@@ -2,16 +2,22 @@ import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/CSS/Navbar.css';
 import { Button } from './Button';
+import '../assets/CSS/LogoutBtn.css'
+
+import fire from "../firebase/firebase";
 
 function Navbar() {
+    
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
-
-    
+      const [currentuser, setcurrentuser] = useState();
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
+    
+
     const showButton =  () => {
+        
         if(window.innerWidth <= 960){
             setButton(false)
 
@@ -23,9 +29,22 @@ function Navbar() {
 useEffect (() => {
 showButton();
 
+fire.auth().onAuthStateChanged((currentuser) =>{
+    setcurrentuser(currentuser)
+})
+
 }, []);
 
     window.addEventListener('resize', showButton);
+   
+    const handleLogout = () => {
+        fire.auth().signOut();
+        
+      };
+
+
+
+   
     return (
         <>
             <nav className='navbar'>
@@ -60,26 +79,37 @@ showButton();
                         </li>
                        
                        <li className='nav-item'>
-                           <Link to='/Javascript' className='nav-links' onClick={closeMobileMenu}>
+                           <Link to='/Javascript' className='nav-links'  onClick={closeMobileMenu}>
                                JAVASCRIPT
                                </Link>
                         </li>
                         
-                        <li className='nav-item'>
-                       <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>
-                           PROFILE
-                       </Link> 
-                    </li>
-
+                     <li className='nav-item'>
                      
-                        <li className='nav-item'>
-                        <Link to='/SignIn' className='nav-links-mobile' onClick={closeMobileMenu}>
-                           Sign Up
-                        </Link>
+             {currentuser ? <Link to='/profile' className='nav-links' onClick={closeMobileMenu}  >
+                         PROFILE
+                     </Link>: null }
+                    </li> 
+                     
+                      <li className='nav-item'>
+                      {currentuser ? <Link to='/SignIn' className='nav-links-mobile' onClick={() => {handleLogout(); closeMobileMenu(); }}>
+                           Sign Out
+                        </Link> 
+                      : <Link to='/SignIn' className='nav-links-mobile' onClick={closeMobileMenu}>
+                           Sign In
+                         </Link> }
                         </li>
                         
+                        
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Sign In</Button>}
+                   {currentuser?
+                    <b>
+
+                    {button &&<button className='btn--outline' onClick={handleLogout}>Sign out
+                    </button>}</b>:<b>
+                    {button &&<Button buttonStyle='btn--outline'>Sign In</Button>}
+                    
+                    </b>}
                 </div>
             </nav>
         </>
