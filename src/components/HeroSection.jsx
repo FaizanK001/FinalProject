@@ -13,17 +13,10 @@ function HeroSection() {
             <div className= "hero-btns">
                 <Button 
                 className='btns'
-                buttonStyle='btn--outline' 
-                buttonSize='btn--large'
-                >
-                 Beginner Tutorials
-                </Button>
-                <Button 
-                className='btns'
                 buttonStyle='btn--primary' 
                 buttonSize='btn--large'
                 >
-                Explore Challenges <i className='fas fa-tasks'/>
+                Quizzes  <i className='fas fa-tasks'/>
                 </Button>
                 </div>
                 

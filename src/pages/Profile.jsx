@@ -1,10 +1,17 @@
 import React from 'react'
-
-export default function Profile({logout}) {
+import ProfileComp from '../components/ProfileComp';
+import HtmlQuiz from '../components/HtmlQuiz'
+import CssQuiz from '../components/CssQuiz'
+import JsQuiz from '../components/JsQuiz'
+import Footer from '../components/Footer'
+export default function Profile() {
     return (
         <>
-            <h1>Profile</h1>
-           
+            <ProfileComp/>
+            <HtmlQuiz/>
+            <CssQuiz/>
+            <JsQuiz/>
+           <Footer/>
         </>
     )
 }

@@ -1,0 +1,15 @@
+
+.container-banner{
+    background-color: white;
+    width: auto;
+    height: 37vh;
+    text-align: center;
+    border-style: hidden;
+    border-radius: 15px;
+    font-family: 'Ruda', sans-serif;
+    
+}
+
+.container-banner> h1 h2{
+   text-align: center;
+}

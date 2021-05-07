@@ -13,21 +13,21 @@ function Card() {
               src="images/image-html.jpg"
               text="Pratice with HTML"
               label="HTML"
-              path="/services"
+              path="/Html"
             />
 
             <CardItem
               src="/images/image-script.png"
               text="Pratice with JavaScript "
               label="JavaScript"
-              path="/services"
+              path="/Javascript"
             />
 
             <CardItem
               src="/images/img-php.png"
-              text="Pratice With PHP"
-              label="PHP"
-              path="/services"
+              text="Pratice With CSS"
+              label="CSS"
+              path="/Css"
             />
           </ul>
           <ul className="cards__items"></ul>

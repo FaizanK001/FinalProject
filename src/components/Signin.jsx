@@ -11,7 +11,6 @@ export default function Signin() {
   const [emailerror, setEmailError] = useState("");
   const [passworderror, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
-  const hide = false;
 
   const clearInputs = () => {
     setEmail("");

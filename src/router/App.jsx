@@ -9,6 +9,7 @@ import Css from '../pages/Css';
 import SignIn from '../pages/SignIn';
 import Javascript from '../pages/Javascript';
 import Profile from '../pages/Profile';
+import HowitWorks from '../pages/HowitWorks'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path='/SignIn'component={SignIn}/>
       <Route  path='/Javascript' component={Javascript}/>
       <Route  path='/profile' component={Profile}/>
+      <Route  path='/HowitWorks' component={HowitWorks}/>
     </Switch>
 
     </Router>
