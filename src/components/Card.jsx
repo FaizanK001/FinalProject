@@ -10,21 +10,21 @@ function Card() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="images/image-html.jpg"
+              src="images/html.jpg"
               text="Pratice with HTML"
               label="HTML"
               path="/Html"
             />
 
             <CardItem
-              src="/images/image-script.png"
+              src="/images/js.png"
               text="Pratice with JavaScript "
               label="JavaScript"
               path="/Javascript"
             />
 
             <CardItem
-              src="/images/img-php.png"
+              src="/images/css.jpg"
               text="Pratice With CSS"
               label="CSS"
               path="/Css"
