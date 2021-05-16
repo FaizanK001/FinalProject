@@ -171,8 +171,8 @@ export default function Javascript() {
         </div>
       </section>
 
- {/* JavaSCript arraysort example*/}
- <section className="section">
+      {/* JavaSCript arraysort example*/}
+      <section className="section">
         <div className="section-text">
           <h2>JavaScript Arrays</h2>
           <p>
@@ -195,7 +195,10 @@ export default function Javascript() {
             </button>
           </div>
 
-          <Popup trigger={arraysortbuttonPop} setTrigger={setarraysortButtonPopup}>
+          <Popup
+            trigger={arraysortbuttonPop}
+            setTrigger={setarraysortButtonPopup}
+          >
             <JsEditor statemessage={arraysort} />
           </Popup>
         </div>

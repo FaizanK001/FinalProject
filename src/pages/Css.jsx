@@ -109,12 +109,13 @@ export default function Css() {
         </div>
       </div>
 
-         {/**CSS OUTLINE Example*/}
-         <div className="css-section">
+      {/**CSS OUTLINE Example*/}
+      <div className="css-section">
         <div className="css-section-text">
           <h2>CSS Outline</h2>
           <p>
-          An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+            An outline is a line that is drawn around elements, OUTSIDE the
+            borders, to make the element "stand out".
           </p>
         </div>
         <div className="Css-Card">
@@ -137,12 +138,13 @@ export default function Css() {
         </div>
       </div>
 
-       {/**CSS Border Example*/}
-       <div className="css-section">
+      {/**CSS Border Example*/}
+      <div className="css-section">
         <div className="css-section-text">
           <h2>CSS Border Style</h2>
           <p>
-          The CSS border properties allow you to specify the style, width, and color of an element's border.
+            The CSS border properties allow you to specify the style, width, and
+            color of an element's border.
           </p>
         </div>
         <div className="Css-Card">
@@ -165,12 +167,12 @@ export default function Css() {
         </div>
       </div>
 
-  {/**CSS input fields Example*/}
-  <div className="css-section">
+      {/**CSS input fields Example*/}
+      <div className="css-section">
         <div className="css-section-text">
           <h2>Styling Input Fields</h2>
           <p>
-          Use the width property to determine the width of the input field:
+            Use the width property to determine the width of the input field:
           </p>
         </div>
         <div className="Css-Card">

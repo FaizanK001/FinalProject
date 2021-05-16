@@ -5,7 +5,7 @@ import "../assets/CSS/Card.css";
 function Card() {
   return (
     <div className="cards">
-      <h1 >Programming Langauges</h1>
+      <h1>Programming Langauges</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
@@ -31,7 +31,6 @@ function Card() {
             />
           </ul>
           <ul className="cards__items"></ul>
-
         </div>
       </div>
     </div>

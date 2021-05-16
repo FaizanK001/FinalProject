@@ -12,209 +12,217 @@ export default function Html() {
   const [buttonPop, setButtonPopup] = useState(false);
   const [headerbuttonPop, setheaderButtonPopup] = useState(false);
   const [stylingbuttonPop, setStylingButtonPopup] = useState(false);
-    const [BgColorbuttonPop, setBgColorButtonPopup] = useState(false);
-    const [FormatbuttonPop, setFormatButtonPopup] = useState(false);
-    const [TablebuttonPop, setTableButtonPopup] = useState(false);
-    const [ListingbuttonPop, setListingButtonPopup] = useState(false);
+  const [BgColorbuttonPop, setBgColorButtonPopup] = useState(false);
+  const [FormatbuttonPop, setFormatButtonPopup] = useState(false);
+  const [TablebuttonPop, setTableButtonPopup] = useState(false);
+  const [ListingbuttonPop, setListingButtonPopup] = useState(false);
 
   return (
     <div>
-     
+      <HtmlHeroSection />
+      <h1>LEARN HTML</h1>
 
-
-     <HtmlHeroSection />
-     <h1>LEARN HTML</h1>
-
-    {/*HTML EXAMPLE*/} 
-   <div className="html-section">
-     <div className="html-section-text">
-     <h2>Easy Learning with HTML "Try it Yourself"</h2>
-     <p>With our "Try it Yourself" editor, you can edit the HTML code and view the result:</p>
-     </div>
-      <div className="Html-card">
-        <div className="Html-card-header">
-        <h3>Example</h3>
+      {/*HTML EXAMPLE*/}
+      <div className="html-section">
+        <div className="html-section-text">
+          <h2>Easy Learning with HTML "Try it Yourself"</h2>
+          <p>
+            With our "Try it Yourself" editor, you can edit the HTML code and
+            view the result:
+          </p>
         </div>
-        <SyntaxHighlighter language={Html} style={docco}>
+        <div className="Html-card">
+          <div className="Html-card-header">
+            <h3>Example</h3>
+          </div>
+          <SyntaxHighlighter language={Html} style={docco}>
             {firstcode}
           </SyntaxHighlighter>
-      <div className="btn-popup">
-        <button onClick={() => setButtonPopup(true)}>"Try it Yourself"</button>
-        </div>
+          <div className="btn-popup">
+            <button onClick={() => setButtonPopup(true)}>
+              "Try it Yourself"
+            </button>
+          </div>
 
-      
-        <Popup trigger={buttonPop} setTrigger={setButtonPopup}>
-          <HtmlEditor
-            statemessage={firstcode}
-          />
-        </Popup>
+          <Popup trigger={buttonPop} setTrigger={setButtonPopup}>
+            <HtmlEditor statemessage={firstcode} />
+          </Popup>
         </div>
       </div>
-      
-   {/*HTML Heading Section*/} 
+
+      {/*HTML Heading Section*/}
       <div className="html-section">
         <div className="html-section-text">
-     <h2>HTML Headings</h2>
-     <p>HTML headings are defined with the h1 to h6 tags.</p>
-     <p>h1 defines the most important heading. h6 defines the least important heading: </p>
-     </div>
-      <div className="Html-card">
-        <div className="Html-card-header">
-        <h3>Example</h3>
+          <h2>HTML Headings</h2>
+          <p>HTML headings are defined with the h1 to h6 tags.</p>
+          <p>
+            h1 defines the most important heading. h6 defines the least
+            important heading:{" "}
+          </p>
         </div>
-        <SyntaxHighlighter language={Html} style={docco}>
+        <div className="Html-card">
+          <div className="Html-card-header">
+            <h3>Example</h3>
+          </div>
+          <SyntaxHighlighter language={Html} style={docco}>
             {header}
           </SyntaxHighlighter>
-      <div className="btn-popup">
-        <button onClick={() => setheaderButtonPopup(true)}>"Try it Yourself"</button>
-        </div>
+          <div className="btn-popup">
+            <button onClick={() => setheaderButtonPopup(true)}>
+              "Try it Yourself"
+            </button>
+          </div>
 
-      
-        <Popup trigger={headerbuttonPop} setTrigger={setheaderButtonPopup}>
-          <HtmlEditor
-            statemessage={header}
-          />
-        </Popup>
+          <Popup trigger={headerbuttonPop} setTrigger={setheaderButtonPopup}>
+            <HtmlEditor statemessage={header} />
+          </Popup>
         </div>
       </div>
 
-      {/*HTML Styling EXAMPLE*/} 
+      {/*HTML Styling EXAMPLE*/}
       <div className="html-section">
         <div className="html-section-text">
-     <h2>The HTML Style Attribute</h2>
-     <p>Setting the style of an HTML element, can be done with the style attribute.</p>
-     <p>The HTML style attribute has the following syntax: </p>
-     </div>
-      <div className="Html-card">
-        <div className="Html-card-header">
-        <h3>Example</h3>
+          <h2>The HTML Style Attribute</h2>
+          <p>
+            Setting the style of an HTML element, can be done with the style
+            attribute.
+          </p>
+          <p>The HTML style attribute has the following syntax: </p>
         </div>
-        <SyntaxHighlighter language={Html} style={docco}>
+        <div className="Html-card">
+          <div className="Html-card-header">
+            <h3>Example</h3>
+          </div>
+          <SyntaxHighlighter language={Html} style={docco}>
             {style}
           </SyntaxHighlighter>
-      <div className="btn-popup">
-        <button onClick={() => setStylingButtonPopup(true)}>"Try it Yourself"</button>
-        </div>
+          <div className="btn-popup">
+            <button onClick={() => setStylingButtonPopup(true)}>
+              "Try it Yourself"
+            </button>
+          </div>
 
-      
-        <Popup trigger={stylingbuttonPop} setTrigger={setStylingButtonPopup}>
-          <HtmlEditor
-            statemessage={style}
-          />
-        </Popup>
+          <Popup trigger={stylingbuttonPop} setTrigger={setStylingButtonPopup}>
+            <HtmlEditor statemessage={style} />
+          </Popup>
         </div>
       </div>
 
-     {/*HTML Background color EXAMPLE*/} 
+      {/*HTML Background color EXAMPLE*/}
       <div className="html-section">
         <div className="html-section-text">
-     <h2>Background Color</h2>
-     <p>The CSS background-color property defines the background color for an HTML element.</p>
-     </div>
-      <div className="Html-card">
-        <div className="Html-card-header">
-        <h3>Example</h3>
+          <h2>Background Color</h2>
+          <p>
+            The CSS background-color property defines the background color for
+            an HTML element.
+          </p>
         </div>
-        <SyntaxHighlighter language={Html} style={docco}>
+        <div className="Html-card">
+          <div className="Html-card-header">
+            <h3>Example</h3>
+          </div>
+          <SyntaxHighlighter language={Html} style={docco}>
             {backgroundcolor}
           </SyntaxHighlighter>
-      <div className="btn-popup">
-        <button onClick={() => setBgColorButtonPopup(true)}>"Try it Yourself"</button>
-        </div>
+          <div className="btn-popup">
+            <button onClick={() => setBgColorButtonPopup(true)}>
+              "Try it Yourself"
+            </button>
+          </div>
 
-      
-        <Popup trigger={BgColorbuttonPop} setTrigger={setBgColorButtonPopup}>
-          <HtmlEditor
-            statemessage={backgroundcolor}
-          />
-        </Popup>
+          <Popup trigger={BgColorbuttonPop} setTrigger={setBgColorButtonPopup}>
+            <HtmlEditor statemessage={backgroundcolor} />
+          </Popup>
         </div>
       </div>
 
- {/*HTML Text Formatting Example*/} 
+      {/*HTML Text Formatting Example*/}
       <div className="html-section">
         <div className="html-section-text">
-     <h2>HTML Text Formatting</h2>
-     <p>HTML contains several elements for defining text with a special meaning.</p>
-     </div>
-      <div className="Html-card">
-        <div className="Html-card-header">
-        <h3>Example</h3>
+          <h2>HTML Text Formatting</h2>
+          <p>
+            HTML contains several elements for defining text with a special
+            meaning.
+          </p>
         </div>
-        <SyntaxHighlighter language={Html} style={docco}>
+        <div className="Html-card">
+          <div className="Html-card-header">
+            <h3>Example</h3>
+          </div>
+          <SyntaxHighlighter language={Html} style={docco}>
             {formatting}
           </SyntaxHighlighter>
-      <div className="btn-popup">
-        <button onClick={() => setFormatButtonPopup(true)}>"Try it Yourself"</button>
-        </div>
+          <div className="btn-popup">
+            <button onClick={() => setFormatButtonPopup(true)}>
+              "Try it Yourself"
+            </button>
+          </div>
 
-      
-        <Popup trigger={FormatbuttonPop} setTrigger={setFormatButtonPopup}>
-          <HtmlEditor
-            statemessage={formatting}
-          />
-        </Popup>
+          <Popup trigger={FormatbuttonPop} setTrigger={setFormatButtonPopup}>
+            <HtmlEditor statemessage={formatting} />
+          </Popup>
         </div>
       </div>
 
-      {/*HTML Table Example*/} 
+      {/*HTML Table Example*/}
       <div className="html-section">
         <div className="html-section-text">
-     <h2>HTML Tables</h2>
-     <p>HTML tables allow web developers to arrange data into rows and columns.</p>
-     </div>
-      <div className="Html-card">
-        <div className="Html-card-header">
-        <h3>Example</h3>
+          <h2>HTML Tables</h2>
+          <p>
+            HTML tables allow web developers to arrange data into rows and
+            columns.
+          </p>
         </div>
-        <SyntaxHighlighter language={Html} style={docco}>
+        <div className="Html-card">
+          <div className="Html-card-header">
+            <h3>Example</h3>
+          </div>
+          <SyntaxHighlighter language={Html} style={docco}>
             {table}
           </SyntaxHighlighter>
-      <div className="btn-popup">
-        <button onClick={() => setTableButtonPopup(true)}>"Try it Yourself"</button>
-        </div>
+          <div className="btn-popup">
+            <button onClick={() => setTableButtonPopup(true)}>
+              "Try it Yourself"
+            </button>
+          </div>
 
-      
-        <Popup trigger={TablebuttonPop} setTrigger={setTableButtonPopup}>
-          <HtmlEditor
-            statemessage={table}
-          />
-        </Popup>
+          <Popup trigger={TablebuttonPop} setTrigger={setTableButtonPopup}>
+            <HtmlEditor statemessage={table} />
+          </Popup>
         </div>
       </div>
-    {/*HTML Listing Example*/} 
-    <div className="html-section">
+      {/*HTML Listing Example*/}
+      <div className="html-section">
         <div className="html-section-text">
-     <h2>HTML Lists</h2>
-     <p>HTML lists allow web developers to group a set of related items in lists.</p>
-     </div>
-      <div className="Html-card">
-        <div className="Html-card-header">
-        <h3>Example</h3>
+          <h2>HTML Lists</h2>
+          <p>
+            HTML lists allow web developers to group a set of related items in
+            lists.
+          </p>
         </div>
-        <SyntaxHighlighter language={Html} style={docco}>
+        <div className="Html-card">
+          <div className="Html-card-header">
+            <h3>Example</h3>
+          </div>
+          <SyntaxHighlighter language={Html} style={docco}>
             {listing}
           </SyntaxHighlighter>
-      <div className="btn-popup">
-        <button onClick={() => setListingButtonPopup(true)}>"Try it Yourself"</button>
-        </div>
+          <div className="btn-popup">
+            <button onClick={() => setListingButtonPopup(true)}>
+              "Try it Yourself"
+            </button>
+          </div>
 
-      
-        <Popup trigger={ListingbuttonPop} setTrigger={setListingButtonPopup}>
-          <HtmlEditor
-            statemessage={listing}
-          />
-        </Popup>
+          <Popup trigger={ListingbuttonPop} setTrigger={setListingButtonPopup}>
+            <HtmlEditor statemessage={listing} />
+          </Popup>
         </div>
       </div>
 
-
-   <Footer/>
+      <Footer />
     </div>
   );
 }
-
-
 
 const firstcode = `<!DOCTYPE html>
 <html>
@@ -269,7 +277,6 @@ const backgroundcolor = `<!DOCTYPE html>
 </html>
 `;
 
-
 const formatting = `
 <!DOCTYPE html>
 <html>
@@ -283,7 +290,6 @@ const formatting = `
 </html>
 
 `;
-
 
 const table = `<!DOCTYPE html>
 <html>

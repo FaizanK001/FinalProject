@@ -3,7 +3,6 @@ import fire from "../firebase/firebase";
 import Forms from "../components/Forms";
 import Profile from "../pages/Profile";
 
-
 export default function Signin() {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -21,7 +20,7 @@ export default function Signin() {
     setEmailError("");
     setPasswordError("");
   };
-// sign in 
+  // sign in
   const handleLogin = () => {
     clearErrors();
     fire
@@ -41,7 +40,7 @@ export default function Signin() {
         }
       });
   };
-// signup
+  // signup
   const handlesignup = () => {
     clearErrors();
     fire
@@ -60,7 +59,7 @@ export default function Signin() {
         }
       });
   };
-// Logout 
+  // Logout
   const handleLogout = () => {
     fire.auth().signOut();
   };
@@ -85,7 +84,6 @@ export default function Signin() {
       {user ? (
         <Profile logout={handleLogout} />
       ) : (
-         
         <Forms
           email={email}
           setEmail={setEmail}
