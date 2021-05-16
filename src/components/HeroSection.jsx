@@ -5,12 +5,12 @@ import '../assets/CSS/HeroSection.css';
 
 function HeroSection() {
     return (
-        <div className='hero-container'>
+        <div  className='hero-container'>
             <video src='videos/HD_Digits_Red.mp4' autoPlay loop muted/>
             
-            <h1>Develop Your Skills</h1>
+            <h1 >Develop Your Skills</h1>
             <p>What are you waiting for?</p>
-            <div className= "hero-btns">
+            <div className= "hero-btns" data-testid="Card-1">
                 <Button 
                 className='btns'
                 buttonStyle='btn--primary' 
